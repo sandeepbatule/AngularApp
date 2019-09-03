@@ -1,0 +1,71 @@
+
+<div class="container">
+    <h3>Sign Up Form</h3>
+    <hr>
+<form  [formGroup]="form" #AdminInformation="ngForm" (ngSubmit)="AdminForm(AdminInformation)" class="was-validated">  
+  
+    <div class="row">  
+      <div class=" col">  
+          <label for="email"> Email </label>  
+          <input formControlName="email" class="form-control" type="text" required> 
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Email is Required</div>  
+      </div>  
+     
+      <div class=" col">  
+          <label for="firstName"> FirstName </label>  
+          <input formControlName="firstName" class="form-control" type="text" required>  
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">FirstName is Required</div> 
+      </div>  
+    </div>  
+    
+    <div class="row">  
+      <div class=" col">  
+          <label for="lastName"> LastName </label>  
+          <input formControlName="lastName" class="form-control" type="text" required>  
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">LastName is Required</div> 
+      </div>  
+    
+      <div class=" col">  
+          <label for="password"> Password </label>  
+          <input formControlName="password" class="form-control" type="password" required> 
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Password is Required</div>  
+      </div>  
+    </div>  
+
+    <div class="row">  
+        <div class=" col">  
+            <label for="address"> Address </label>  
+            <input formControlName="address" class="form-control" type="text" required>   
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Address is Required</div>
+        </div>  
+       
+        <div class=" col">  
+            <label for="dob"> Date Of Birth </label>  
+            <input formControlName="dob" class="form-control" type="text" required> 
+            <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback"> Date Of Birth is Required</div>  
+        </div>  
+    </div>  
+
+      <div class="row">  
+        <div class=" col">  
+            <label for="company"> Company </label>  
+            <input formControlName="company" class="form-control" type="text" required>  
+            <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Company is Required</div> 
+        </div>  
+      </div>  
+        
+    <div class="row" style="margin-top: 40px;">  
+      <div class="col-md-4">  
+          <button [disabled]="AdminInformation.form.invalid" class="btn btn-primary">Submit</button>  
+      </div>  
+    </div>  
+    
+  </form>  
+</div>
